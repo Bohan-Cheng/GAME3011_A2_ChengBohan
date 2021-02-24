@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class LockButton : MonoBehaviour
 {
-    bool Unlocked = false;
-    [SerializeField] int Order = 0;
-    [SerializeField] float ResetTime = 5;
+    public bool Unlocked = false;
+    public int Order = 0;
     [SerializeField] float OpenPosY;
+    Lock LockMana;
     Vector3 OriginPos;
 
     void Start()
     {
         OriginPos = transform.position;
+        LockMana = FindObjectOfType<Lock>();
     }
 
     void Update()
@@ -36,13 +37,16 @@ public class LockButton : MonoBehaviour
         {
             GetComponent<AudioSource>().PlayOneShot(GetComponent<AudioSource>().clip);
             Unlocked = true;
-            Invoke("ResetPin", ResetTime);
+            LockMana.TryPin(Order);
         }
     }
 
-    void ResetPin()
+    public void ResetPin()
     {
-        GetComponent<AudioSource>().PlayOneShot(GetComponent<AudioSource>().clip);
-        Unlocked = false;
+        if (Unlocked)
+        {
+            GetComponent<AudioSource>().PlayOneShot(GetComponent<AudioSource>().clip);
+            Unlocked = false;
+        }
     }
 }

@@ -35,8 +35,12 @@ public class Bolt : MonoBehaviour
             {
                 MaxX = 0.6f;
             }
-            if(transform.position.x < MaxX || transform.position.x >= OriPos.x+1)
+            if(transform.position.x < MaxX || transform.position.x > OriPos.x)
             {
+                if(transform.position.x > OriPos.x)
+                {
+                    transform.position = OriPos;
+                }
                 isUsing = false;
             }
         }
