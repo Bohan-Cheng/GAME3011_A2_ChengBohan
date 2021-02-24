@@ -1,0 +1,3 @@
+5 pings
+has order, if failed to do in order, it will reset
+has reset count down, if time up, it will reset (difficalty option)
