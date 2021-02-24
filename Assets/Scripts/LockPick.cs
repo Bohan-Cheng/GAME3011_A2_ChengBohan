@@ -20,7 +20,7 @@ public class LockPick : MonoBehaviour
         {
             transform.position = Vector3.Lerp(transform.position, OriPos, 2 * Time.deltaTime);
         }
-        else
+        else if(isUsing)
         {
             mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             transform.position = Vector3.Lerp(transform.position, new Vector3(mousePos.x, mousePos.y, 0) + new Vector3(offSet.x, offSet.y, 0), 10 * Time.deltaTime);

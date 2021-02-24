@@ -5,6 +5,7 @@ using UnityEngine;
 public class LockCover : MonoBehaviour
 {
     [SerializeField] float LifeTime = 3.0f;
+    [SerializeField] GameObject OpenText;
     Rigidbody2D rigid;
 
     // Start is called before the first frame update
@@ -15,6 +16,8 @@ public class LockCover : MonoBehaviour
 
     void OnMouseDown()
     {
+        Destroy(OpenText);
+        GetComponent<AudioSource>().PlayOneShot(GetComponent<AudioSource>().clip);
         if (rigid)
         {
             rigid.gravityScale = 5;
