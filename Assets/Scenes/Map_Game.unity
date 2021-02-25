@@ -871,7 +871,7 @@ MonoBehaviour:
   - {fileID: 1650322492}
   - {fileID: 1884506484}
   Unlocked: 0
-  StartOrder: 0
+  CurrentOrder: 1
 --- !u!1 &730080672
 GameObject:
   m_ObjectHideFlags: 0
@@ -945,6 +945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ab6132e6348eb84b9185c4ac94896e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Unlocked: 0
   Order: 0
   OpenPosY: 1.096
 --- !u!82 &730080676
@@ -1172,6 +1173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ab6132e6348eb84b9185c4ac94896e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Unlocked: 0
   Order: 0
   OpenPosY: 1.096
 --- !u!61 &838501503
@@ -2100,6 +2102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ab6132e6348eb84b9185c4ac94896e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Unlocked: 0
   Order: 0
   OpenPosY: 1.096
 --- !u!61 &1319130382
@@ -2435,6 +2438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ab6132e6348eb84b9185c4ac94896e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Unlocked: 0
   Order: 0
   OpenPosY: 1.096
 --- !u!61 &1650322493
@@ -2962,6 +2966,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ab6132e6348eb84b9185c4ac94896e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Unlocked: 0
   Order: 0
   OpenPosY: 1.096
 --- !u!61 &1884506485
