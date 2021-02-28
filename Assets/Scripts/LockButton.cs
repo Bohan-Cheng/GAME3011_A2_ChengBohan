@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class LockButton : MonoBehaviour
 {
+    [SerializeField] SpriteRenderer tumbler;
+    [SerializeField] Color[] HLcolors;
     public bool Unlocked = false;
+    public bool shouldHint = true;
     public int Order = 0;
     [SerializeField] float OpenPosY;
     Lock LockMana;
@@ -49,4 +52,20 @@ public class LockButton : MonoBehaviour
             Unlocked = false;
         }
     }
+
+    public void Highlight()
+    {
+        if (shouldHint)
+        {
+            tumbler.color = HLcolors[Order];
+        }
+    }
+    public void StopHighlight()
+    {
+        if (shouldHint)
+        {
+            tumbler.color = Color.white;
+        }
+    }
+
 }

@@ -65,6 +65,11 @@ public class Lock : MonoBehaviour
             if(!hasOrder(RandOrder))
             {
                 Pins[i].Order = RandOrder;
+                if (FindObjectOfType<GameMana>().Difficulty > 0)
+                {
+                    Pins[RandOrder - 1].shouldHint = false;
+                    FindObjectOfType<GameMana>().Difficulty--;
+                }
             }
             else
             {
